@@ -1,0 +1,17 @@
+{
+    "net_names": [
+        "/home/dforster/projects/def-gbader/dforster/GIN-DepMap/nets/GIN-99_85.txt",
+        "/home/dforster/projects/def-gbader/dforster/GIN-DepMap/nets/DepMap-99_85.txt"
+    ],
+    "out_name": "bionic/outputs/Gin-DepMap-params4",
+    "epochs": 10000,
+    "batch_size": 2048,
+    "learning_rate": 0.0001,
+    "gat_shapes": {
+        "dimension": 256,
+        "n_heads": 10,
+        "n_layers": 1
+    },
+    "embedding_size": 4096,
+    "save_model": false
+}

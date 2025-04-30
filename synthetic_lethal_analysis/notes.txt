@@ -1,0 +1,17 @@
+Synthetic Lethal analysis (NE and OMIM genes):
+Steps:
+a. Define set of non-essential (NE) OMIM genes: 
+	i. NE genes: (`HAP1_Mutant fitness_rich (log2 fold change)`> (-.5) and not `HAP1_essential gene`
+	ii. OMIM genes: get genes listed in morbidmap.txt downloaded from OMIM
+	iii. Take intersection of i and ii	
+b. Get all significant GIs
+	i. FDR < .1 and qGI<0
+	ii. Remove 'TAPT1_375_rich' query
+	iii. Keep only non-essential (NE) OMIM genes (from step a) on the library side
+	iv. Remove self pairs (library gene=query gene)
+c. Threshold ('double mutant fitness') metric
+	i. Get SMF score based on rich or minimal screen type
+	ii. SL threshold metric = qGI + SMF
+d. Plot threshold 'double mutant fitness' on the x-axis vs. 
+	i. # of unique genes with at least one interaction with (qGI + SMF) < 'double mutant fitness'
+	ii.# of total interactions with (qGI + SMF) < 'double mutant fitness'
